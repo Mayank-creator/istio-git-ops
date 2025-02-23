@@ -1,0 +1,19 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: employee-virtual-service
+  namespace: dev
+spec:
+  hosts:
+  - "*"
+  gateways:
+  - employee-gateway
+  http:
+  - match:
+    - uri:
+        prefix: "/apis/v1/employees"
+    route:
+    - destination:
+        host: employee-service.dev.svc.cluster.local
+        port:
+          number: 8080
