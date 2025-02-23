@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/your-org/istio-gitops.git'
+    repoURL: 'https://github.com/Mayank-creator/istio-git-ops.git'
     targetRevision: main
     path: employee-service
   destination:
